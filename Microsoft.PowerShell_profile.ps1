@@ -18,6 +18,6 @@ function prompt {
    $host.ui.RawUI.WindowTitle = "Jason`'s Rocking PowerShell Console: $([Math]::Round((gps -id $PID).WorkingSet/1mb,2)) MB Memory used"
    return ' '
 } 
-$docs = 'VMDrive:\Documents'
-$Down = 'VMDrive:\Downloads'
+$docs = "$env:USERPROFILE\Documents"
+$Down = "$env:USERPROFILE\Downloads"
 Function edit {Powershell_ise $args}
