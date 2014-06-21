@@ -1,0 +1,93 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+    <Snippets  xmlns='http://schemas.microsoft.com/PowerShell/Snippets'>
+        <Snippet Version='1.0.0'>
+            <Header>
+                <Title>Remoting-Function</Title>
+                <Description>Snippet to build a function that uses PSRemoting</Description>
+                <Author></Author>
+                <SnippetTypes>
+                    <SnippetType>Expansion</SnippetType>
+                </SnippetTypes>
+            </Header>
+
+            <Code>
+                <Script Language='PowerShell' CaretOffset='0'>
+                    <![CDATA[Function Remoting-Function
+{
+<#
+.SYNOPSIS
+
+.DESCRIPTION
+
+.EXAMPLE
+
+.NOTES
+
+#>
+[CmdletBinding(ConfirmImpact='Medium',DefaultParameterSetName='Computer')]
+Param
+  (
+    # Enter a computername or multiple computernames
+    [Parameter( 
+    ValueFromPipeline=$True, 
+    ValueFromPipelineByPropertyName=$True,
+    HelpMessage='Enter a ComputerName or IP Address, accepts multiple ComputerNames',
+    ParameterSetName='Computer')]
+    [Alias('__Server')] 
+    [System.Collections.ArrayList][string[]]$ComputerName = $env:COMPUTERNAME,
+
+    # Specify a particular PSSession
+    [Parameter( 
+    ValueFromPipeline=$True, 
+    ValueFromPipelineByPropertyName=$True,
+    ParameterSetName='Session')]
+    [System.Management.Automation.Runspaces.PSSession]$Session
+  )
+Begin 
+  {
+    $Params = @{
+        Scriptblock = {
+            Try {$VerbosePreference = $Using:VerbosePreference} Catch {}
+          }
+      }
+    If ($credential) {$Params.Add('Credential',$credential)}
+  }
+Process
+    {
+      switch ($PSCmdlet.ParameterSetName)
+        {
+          Computer { [System.Collections.ArrayList]$comps += $ComputerName }
+          Session { 
+              Invoke-Command -Session $Session 
+              $skip = $true
+            }
+        }   
+    }
+End 
+  {
+    if (-not $skip)
+      {
+        if ($Comps -contains $ENV:COMPUTERNAME)
+          {
+            $Comps.Remove("$ENV:COMPUTERNAME")
+            $local = $True
+          }
+        if (($Comps).Count -gt 0)
+          {
+            $params.Add('ComputerName',$Comps)
+            Invoke-Command @params
+          }
+        if ($local)
+          {
+            Try {$params.Remove('ComputerName')} Catch {}
+            Invoke-Command @params
+          }   
+      } 
+    }
+}]]>
+                </Script>
+            </Code>
+
+    </Snippet>
+</Snippets>
+
