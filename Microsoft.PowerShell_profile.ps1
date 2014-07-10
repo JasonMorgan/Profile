@@ -1,7 +1,7 @@
-#New-PSDrive -Name Z -PSProvider FileSystem -Root '\\VMWare-host\Shared Folders' | out-null
-Set-Item -Path Env:HOME -Value $HOME
+#Set-Item -Path Env:\HOME -Value C:\Users\jmorg_000
 start-job -ScriptBlock {Update-Help -Force} | Out-Null
 C:\Users\jmorg_000\AppData\Local\GitHub\shell.ps1
+[environment]::SetEnvironmentVariable('Home',$HOME)
 cd c:\git
 function ql { $args }
 function qs ([string]$Separator) { if ($Separator) {$OFS = $Separator} ; "$args" }
