@@ -188,23 +188,23 @@
     </Color>
     <Color>
       <A>255</A>
-      <R>14</R>
-      <G>14</G>
-      <B>14</B>
+      <R>85</R>
+      <G>85</G>
+      <B>85</B>
       <ScA>1</ScA>
-      <ScR>0.004391442</ScR>
-      <ScG>0.004391442</ScG>
-      <ScB>0.004391442</ScB>
+      <ScR>0.09084172</ScR>
+      <ScG>0.09084172</ScG>
+      <ScB>0.09084172</ScB>
     </Color>
     <Color>
       <A>255</A>
-      <R>0</R>
-      <G>0</G>
-      <B>255</B>
+      <R>212</R>
+      <G>212</G>
+      <B>212</B>
       <ScA>1</ScA>
-      <ScR>0</ScR>
-      <ScG>0</ScG>
-      <ScB>1</ScB>
+      <ScR>0.658374846</ScR>
+      <ScG>0.658374846</ScG>
+      <ScB>0.658374846</ScB>
     </Color>
     <Color>
       <A>255</A>
@@ -228,11 +228,11 @@
     </Color>
     <Color>
       <A>255</A>
-      <R>204</R>
+      <R>255</R>
       <G>0</G>
       <B>0</B>
       <ScA>1</ScA>
-      <ScR>0.603827357</ScR>
+      <ScR>1</ScR>
       <ScG>0</ScG>
       <ScB>0</ScB>
     </Color>
@@ -249,11 +249,11 @@
     <Color>
       <A>255</A>
       <R>0</R>
-      <G>100</G>
+      <G>178</G>
       <B>0</B>
       <ScA>1</ScA>
       <ScR>0</ScR>
-      <ScG>0.127437681</ScG>
+      <ScG>0.445201218</ScG>
       <ScB>0</ScB>
     </Color>
     <Color>
@@ -299,11 +299,11 @@
     <Color>
       <A>255</A>
       <R>0</R>
-      <G>0</G>
+      <G>255</G>
       <B>255</B>
       <ScA>1</ScA>
       <ScR>0</ScR>
-      <ScG>0</ScG>
+      <ScG>1</ScG>
       <ScB>1</ScB>
     </Color>
     <Color>
@@ -328,13 +328,13 @@
     </Color>
     <Color>
       <A>255</A>
-      <R>128</R>
-      <G>0</G>
-      <B>128</B>
+      <R>212</R>
+      <G>212</G>
+      <B>212</B>
       <ScA>1</ScA>
-      <ScR>0.2158605</ScR>
-      <ScG>0</ScG>
-      <ScB>0.2158605</ScB>
+      <ScR>0.658374846</ScR>
+      <ScG>0.658374846</ScG>
+      <ScB>0.658374846</ScB>
     </Color>
     <Color>
       <A>255</A>
@@ -379,12 +379,12 @@
     <Color>
       <A>255</A>
       <R>0</R>
-      <G>128</G>
-      <B>128</B>
+      <G>204</G>
+      <B>204</B>
       <ScA>1</ScA>
       <ScR>0</ScR>
-      <ScG>0.2158605</ScG>
-      <ScB>0.2158605</ScB>
+      <ScG>0.603827357</ScG>
+      <ScB>0.603827357</ScB>
     </Color>
     <Color>
       <A>255</A>
@@ -807,7 +807,7 @@
       <ScB>0.212230757</ScB>
     </Color>
   </Values>
-  <Name>DarkTheme With DSC</Name>
+  <Name>(Customized Theme)</Name>
   <FontFamily>Lucida Console</FontFamily>
   <FontSize>11</FontSize>
 </StorableColorTheme>
