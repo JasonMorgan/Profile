@@ -6,6 +6,8 @@ cd c:\git
 function ql { $args }
 function qs ([string]$Separator) { if ($Separator) {$OFS = $Separator} ; "$args" }
 function mf {Param ($path) new-item -itemtype file -path $path -force}
+$Host.PrivateData.ErrorForegroundColor = 'magenta'
+$Host.PrivateData.VerboseForegroundColor = 'cyan'
 $host.ui.RawUI.WindowTitle = "Jason`'s Rocking PowerShell Console: $([Math]::Round((gps -id $PID).WorkingSet/1mb,2)) MB Memory used"
 Import-Module c:\git\posh-git
 Import-Module PSReadline
